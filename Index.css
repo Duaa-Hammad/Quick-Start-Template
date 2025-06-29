@@ -1,0 +1,979 @@
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #388DA8;
+    --dark-color: #3E5055;
+    --hover-color: #569EB5;
+    --background: #F3F8FA;
+    --pricing-bg: #F7FBFC;
+    --gray: #8C9194;
+    --default-color: #3d4348;
+    --heading-color: #3e5055;
+    --nav-color: #313336;
+}
+
+/*
+--background-color: #ffffff;
+    --default-color: #3d4348;
+    --heading-color: #3e5055;
+    --accent-color: #388da8;
+    --contrast-color: #ffffff; 
+ */
+a {
+    color: var(--nav-color);
+    display: block;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.section-head {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-head h2 {
+    position: relative;
+}
+
+.section-head span {
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 3px;
+    top: 52px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.section-head p {
+    padding: 15px 0;
+}
+
+.main-color {
+    color: var(--dark-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* -------------------------------------------------------------------------------------------- */
+/* Go Up Arrow */
+.up {
+    position: fixed;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    bottom: 25px;
+    right: 15px;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.up:hover {
+    background-color: var(--hover-color);
+}
+
+/* ------------------------------------------------------------------------------ */
+.navbar {
+    padding: 30px 6%;
+    height: 17%;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.logo-container {
+    float: left;
+    width: 20%;
+}
+
+.menu-list {
+    float: right;
+    width: 80%;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.logo-container {
+    padding-left: 10px;
+}
+
+.logo-container .logo img {
+    width: 16%;
+}
+
+.logo-container .logo h1 {
+    font-size: 30px;
+    color: var(--dark-color);
+    padding-left: 10px;
+}
+
+.logo-container img,
+.logo h1 {
+    float: left;
+}
+
+.menu-list {
+    padding-left: 8%;
+}
+
+.menu-list a {
+    float: left;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.menu-list a:hover,
+.dropdown-container a:hover,
+.dropdown-container:hover {
+    color: var(--hover-color);
+}
+
+button {
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 31px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menu-list button {
+    margin-top: -12px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.dropdown-container {
+    float: left;
+    margin-left: 28px;
+    font-size: 18px;
+    color: var(--nav-color);
+    font-weight: 400;
+}
+
+.dropdown-list {
+    position: absolute;
+    width: 12%;
+    top: 65px;
+    height: 150px;
+    right: 293px;
+    padding: 20px;
+    background-color: white;
+    display: none;
+}
+
+.dropdown-container:hover .dropdown-list {
+    display: block;
+    /* Show the dropdown on hover */
+}
+
+.dropdown-list a {
+    padding: 5px;
+    font-weight: 400;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+header {
+    padding: 10% 5% 0 5%;
+    text-align: center;
+    /* 1st way to add a white layer on the background image*/
+
+    /* background-image: linear-gradient(to bottom, #ffffffda, #ffffffb0), url(imgs/hero-bg-light.webp); */
+
+    /* -------------------------------------------------------------------------- */
+
+    /* 2nd way to add a white layer on the background image*/
+
+    background-image: url(imgs/hero-bg-light.webp);
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    /* Ensures header is above other elements with lower z-index */
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+
+    /* Mix 15% white (#ffffff) with 85% transparency (transparent).
+    So, you get a very faint white background that is mostly transparent. */
+    background: color-mix(in srgb, #ffffff, transparent 15%);
+
+    top: 0;
+    left: 0;
+    /* opacity: 0.5; */
+
+
+    /* Positions the layer behind the header's content */
+    z-index: -1;
+}
+
+.inner-container {
+    /* width: 90%;
+    margin: auto; */
+    padding-top: 8%;
+}
+
+.inner-container h1 {
+    font-size: 48px;
+    color: var(--dark-color);
+}
+
+.inner-container h1 span {
+    color: var(--main-color);
+}
+
+.inner-container p {
+    color: #748492;
+    font-size: 20px;
+}
+
+.grouping a {
+    font-weight: bold;
+    color: var(--dark-color);
+    display: inline;
+}
+
+.grouping a:hover {
+    color: var(--hover-color);
+}
+
+.home .image-container img {
+    width: 60%;
+}
+
+.grouping {
+    margin-top: 20px;
+}
+
+.grouping button {
+    margin-right: 15px;
+    width: 14%;
+    font-size: 16px;
+
+    /* padding: 12px; */
+    padding: 10px 28px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------- */
+.Item {
+    float: left;
+    width: 33.33%;
+    padding: 25px;
+}
+
+.middle-section {
+    padding: 20px;
+    background-color: var(--background);
+    margin: 5% 0;
+}
+
+.middle-container {
+    width: 90%;
+    margin: auto;
+}
+
+.Item-inner-container a {
+    color: var(--dark-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Item-inner-container p {
+    color: #605566;
+}
+
+/* --------------------------------------------------------------------------- */
+.about-section {
+    padding-top: 10%;
+    margin-top: -10%;
+    margin-bottom: 5%;
+}
+
+.about-section .content {
+    padding: 20px;
+}
+
+.content h2 {
+    color: var(--dark-color);
+    font-size: 30px;
+}
+
+.content .p-1 {
+    color: #748492;
+}
+
+.content .p-2 {
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.content ul li {
+    padding: 15px
+}
+
+.about-inner-container {
+    width: 90%;
+    margin: auto;
+}
+
+.btn {
+    width: 150px;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.content button a {
+    color: white;
+}
+
+.about-section .content,
+.about-section .images {
+    float: left;
+    width: 50%;
+}
+
+.images div {
+    float: left;
+    width: 50%;
+    padding: 12px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-3 {
+    margin-top: 12px;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.features {
+    width: 90%;
+    margin: auto;
+    padding-top: 8%;
+    margin-top: -8%;
+}
+
+.features p {
+    color: #3d4348;
+    padding: 10px 0;
+}
+
+.boxes-container,
+.features-image {
+    float: left;
+    width: 50%;
+}
+
+.features-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.boxes-container {
+    padding-right: 40px;
+}
+
+.box {
+    padding-bottom: 45px;
+}
+
+.box-inner-container {
+    padding: 25px;
+    border-radius: 20px;
+    background-color: var(--background);
+}
+
+/* --------------------- */
+.features-bottom {
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+
+.features-bottom .image-container,
+.features-bottom .box {
+    float: left;
+    width: 50%;
+}
+
+.features-bottom .image-container img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.features-bottom .box-inner-container {
+    background-color: #F3F8FA;
+}
+
+.features-bottom p {
+    padding: 15px;
+}
+
+.features-bottom .box {
+    padding: 40px;
+    padding-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------ */
+.services {
+    width: 90%;
+    margin: auto;
+    padding-top: 8%;
+    margin-top: -8%;
+}
+
+.card {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+.card-inner-container {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-inner-container h3 {
+    font-size: 25px;
+    color: var(--dark-color);
+}
+
+.card-inner-container span {
+    color: var(--main-color);
+}
+
+.card-inner-container p {
+    padding: 5px;
+}
+
+/* ------------------------------------------------------------------------- */
+.services-bottom {
+    margin-top: 5%;
+}
+
+.services-bottom .content,
+.services-bottom .img-container {
+    float: left;
+    width: 50%;
+}
+
+.services-container {
+    width: 90%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.services-bottom .img-inner-container {
+    width: 85%;
+    margin-left: 15%;
+}
+
+.services-bottom .img-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 437px;
+}
+
+.content-box .box {
+    float: left;
+    width: 50%;
+}
+
+.content-box .box .inner-box {
+    padding: 10px;
+}
+
+.content-header h3 {
+    font-size: 30px;
+    color: var(--dark-color);
+}
+
+.content-header p {
+    padding: 25px 0;
+}
+
+.content-box .inner-box h3 {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------------------ */
+.section {
+    /* to lead me to the destination that I want. */
+    padding-top: 5%;
+    margin-top: -5%;
+}
+
+.plan-container {
+    /* background-color: #605566; */
+    float: left;
+    width: 33.3%;
+    padding: 15px;
+}
+
+.plan-main-container {
+    width: 90%;
+    margin: auto;
+    /* background-color: #b4b4b4; */
+}
+
+.plan-inner-container {
+    /* background-color: #eee; */
+    background-color: var(--pricing-bg);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.plan-inner-container h4 {
+    font-size: 20px;
+    color: var(--heading-color);
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.plan-inner-container p {
+    color: var(--dark-color);
+}
+
+.plan-inner-container ul,
+.plan-inner-container ul li {
+    padding: 5px;
+    text-align: center;
+}
+
+.plan-inner-container ul li,
+.plan-inner-container span:nth-child(2) {
+    color: var(--gray);
+}
+
+.plan-inner-container span:nth-child(1) {
+    color: var(--main-color);
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.btn-container {
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.free-trial-btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #3D4348;
+    margin: 5px 0;
+}
+
+.free-trial-btn:hover {
+    background-color: var(--main-color);
+}
+
+.center {
+    text-align: center;
+}
+
+.span-container {
+    padding: 5px;
+}
+
+.diff-color {
+    background-color: var(--main-color);
+}
+
+/* ------------------------------------------------------------------------ */
+
+.question-section .Container {
+    width: 80%;
+    margin: auto;
+    /* background-color: rebeccapurple */
+}
+
+.div-container {
+    /* background-color: blue; */
+    padding: 15px 20px
+}
+
+.div-inner-container {
+    /* 
+     This means the resulting color will be very close to transparent, with only 3% of var(--main-color)
+     showing through.
+     The color-mix() function is useful for creating subtle variations and effects with colors in CSS.
+      */
+    background-color: color-mix(in srgb, var(--main-color), transparent 97%);
+
+    border: 1px solid color-mix(in srgb, var(--main-color), transparent 80%);
+
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.div-inner-container h3 {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+
+.div-inner-container .heading-3 {
+    color: var(--main-color);
+}
+
+.div-inner-container h3:hover {
+    color: var(--main-color);
+}
+
+/* ------------------------------------------------------------------------ */
+.T-cards-container {
+    padding: 20px;
+    /* background-color: #f2f9fc; */
+    background-color: #f4fafced;
+}
+
+.T-cards-inner-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.T-Card {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+}
+
+.T-card-inner-container {
+    background-color: #FFFFFF;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.T-card-inner-container p {
+    font-style: italic;
+    font-size: 18px;
+    padding: 25px 0;
+    color: var(--dark-color);
+}
+
+.T-card-inner-container h3 {
+    color: var(--dark-color);
+    padding: 5px;
+}
+
+.T-card-inner-container h4 {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+/* .box-shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
+
+.transparent {
+    opacity: 0.3;
+}
+
+.T-card-inner-container .img {
+    width: 40%;
+    margin: auto;
+}
+
+.T-card-inner-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------------- */
+.contact-container {
+    width: 90%;
+    margin: auto;
+    /* background-color: gray; */
+}
+
+.c-header .c-div {
+    float: left;
+}
+
+.one {
+    width: 50%;
+}
+
+.two {
+    width: 25%;
+}
+
+.inner {
+    border-radius: 2px;
+    padding: 30px;
+    text-align: center;
+}
+
+.inner h3 {
+    color: var(--dark-color);
+}
+
+.inner p {
+    color: var(--default-color);
+    font-size: 14px;
+    padding: 10px;
+}
+
+.c-div,
+.float {
+    padding: 12px;
+}
+
+.c-middle .float {
+    float: left;
+    width: 50%;
+}
+
+.c-middle .inner-form,
+.inner {
+    /* background-color: bisque; */
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.inner-map iframe {
+    border: none;
+    width: 100%;
+    height: 400.7px;
+}
+
+.c-middle .inner-form form {
+    padding: 20px
+}
+
+form input {
+    padding: 12px;
+    margin: 10px;
+    color: #3d4348;
+    border: 1px solid color-mix(in srgb, #3d4348, transparent 80%);
+}
+
+form button {
+    margin-left: 10px;
+    /* margin-bottom: 5px; */
+    margin-left: 32%;
+    font-size: 16px;
+    width: 160px;
+    padding: 11px
+}
+
+.inline input {
+    display: inline-block;
+    width: 45%;
+}
+
+.block input {
+    width: 95%;
+    display: block;
+}
+
+.message {
+    width: 95%;
+    padding: 12px;
+    padding-bottom: 23%;
+    margin: 10px;
+    color: var(--gray);
+    resize: vertical;
+    /* Allow only vertical resizing */
+    color: #3d4348;
+    border: 1px solid color-mix(in srgb, #3d4348, transparent 80%);
+}
+
+/* ---------------------------------------------------------------------------------- */
+footer {
+    margin-top: 5%;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    /* background-color: brown; */
+}
+
+.footer-div {
+    float: left;
+    padding: 15px;
+    /* background-color: bisque; */
+}
+
+.footer-div:nth-child(1),
+.footer-div:nth-child(4) {
+    width: 33.33%;
+}
+
+.footer-div:nth-child(2),
+.footer-div:nth-child(3) {
+    width: 16.67%;
+}
+
+.footer-inner h4 {
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+.footer-inner .logo-name {
+    font-size: 26px;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+.Links ul li a {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 15px;
+    /* font-weight: 600; */
+}
+
+.Links ul li a:hover {
+    color: var(--hover-color);
+}
+
+.Links ul li,
+.footer-inner p,
+.footer-inner h4 {
+    padding: 5px 0;
+}
+
+.quick-start p {
+    padding: 2px;
+    color: #615d60;
+    font-size: 15px;
+    /* font-weight: 600; */
+}
+
+.footer-inner p span {
+    font-weight: bold;
+    color: black;
+}
+
+.footer-inner input {
+    margin: 0;
+    width: 94%;
+    border-radius: 25px;
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--main-color), transparent 70%);
+}
+
+.footer-inner button {
+    margin: 0;
+    position: absolute;
+    right: 95px;
+    width: 130px;
+}
+
+.footer-btn {
+    margin-top: 20px;
+}
+
+/* ----------------------------------------------------- */
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 30px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.copyright a {
+    color: var(--main-color);
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------- */
+
+.images-section .image {
+    float: left;
+    width: 16.66%;
+    padding-left: 45px;
+}
+
+.images-container {
+    width: 90%;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.images-section img {
+    width: 55%;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.images-section img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------------- */
